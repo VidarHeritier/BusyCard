@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background-blend-mode: soft-light;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F01%2F90513-universe-galaxy-space.jpg&f=1&nofb=1&ipt=be6b565b5c80678dce9af7562d9029077b7c385681b1f6fa8cd98e4ef0be85cc&ipo=images);
+  background-color: rgba(255, 235, 205, 0.428);
+}
+body {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+#card {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  width: 50rem;
+  height: 40rem;
+  background-color: aquamarine;
+  border-radius: 1rem;
+  border: 0.2rem solid aqua;
+  box-shadow: white 0.5rem 1rem 1rem;
+  text-align: center;
+  animation: cardAnim 0.15s ease-in;
+  animation: cardShadowAnim 50s infinite;
+  filter: drop-shadow(pink 0.25rem 0.5rem 0.5rem);
+  transform: skewY(0.8deg);
+}
+.profilepic {
+  width: 20rem;
+  height: 30rem;
+  margin: 5rem 0;
+  border: 1rem black solid;
+  border-radius: 5000rem;
+  box-shadow: 0.1rem 0.1rem antiquewhite;
+  animation-delay: 0.2s;
+  animation: picAnim 0.3s ease-in;
+}
+.cardText {
+  margin-left: 3rem;
+  margin-top: 40%;
+  font-size: 3rem;
+  font-style: oblique;
+  font-weight: 900;
+  font-family: fantasy;
+  text-shadow: 0.1rem 0.1rem antiquewhite;
+  letter-spacing: 0.2rem;
+  animation-delay: 0.3s;
+  animation: textAnim 0.5s ease-in;
+}
+@keyframes cardAnim {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+@keyframes cardShadowAnim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes picAnim {
+  0% {
+    transform: scaleX(0);
+  }
+  60% {
+    transform: scaleX(1);
+  }
+  80% {
+    transform: scaleX(0.8);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes textAnim {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes cardClickAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: skewY(-1.6deg);
+  }
+}
+@keyframes cardClickAnim2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: skewY(1.6deg);
+  }
+}
